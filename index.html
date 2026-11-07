@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#143b2a">
+<meta name="description" content="Bon Goût — restaurant de cuisine africaine : spécialités béninoises, ghanéennes, ivoiriennes, camerounaises, sénégalaises et togolaises.">
+<title>Bon Goût | Restaurant africain</title>
+<style>
+:root{--green:#143b2a;--green2:#24563d;--gold:#e5a83b;--cream:#fff8ec;--ink:#22251f;--muted:#6c716a;--white:#fff;--shadow:0 12px 35px #143b2a18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#fffdf9;color:var(--ink)}button,input,select{font:inherit}button{cursor:pointer}
+header{position:sticky;top:0;z-index:20;background:#fffdf9ee;backdrop-filter:blur(12px);border-bottom:1px solid #eee7dc}.nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;color:var(--green);font-weight:900;font-size:1.35rem;text-decoration:none}.logo{display:grid;place-items:center;width:42px;height:42px;background:var(--gold);border-radius:14px;color:var(--green);font-size:1.3rem}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a{color:var(--ink);text-decoration:none;font-weight:650}.cart-open{background:var(--green);color:white;border:0;border-radius:999px;padding:11px 17px;font-weight:800}.hero{background:linear-gradient(120deg,#143b2aee,#143b2a9c),url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1800&q=85') center/cover;color:white}.hero-inner{max-width:1180px;margin:auto;padding:86px 22px 92px}.eyebrow{color:var(--gold);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2.5rem,6vw,5.4rem);line-height:1.02;max-width:760px;margin:14px 0}.hero p{font-size:1.15rem;max-width:610px;color:#f3eee5;line-height:1.7}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 19px;font-weight:850;text-decoration:none}.btn-gold{background:var(--gold);color:var(--green)}.btn-light{background:white;color:var(--green)}.section{max-width:1180px;margin:auto;padding:66px 22px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.section h2{font-size:clamp(1.8rem,4vw,3rem);color:var(--green);margin:7px 0}.section-head p{max-width:580px;color:var(--muted);line-height:1.6;margin:0}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 28px}.filter{border:1px solid #ded9ce;background:white;color:var(--green);padding:9px 15px;border-radius:999px;font-weight:750}.filter.active,.filter:hover{background:var(--green);color:white;border-color:var(--green)}.searchrow{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}.searchrow input{flex:1;min-width:220px;padding:13px 16px;border:1px solid #ddd5c8;border-radius:12px;background:white}.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.dish{border:1px solid #eee5d8;border-radius:18px;background:white;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s}.dish:hover{transform:translateY(-4px)}.dish-top{height:9px;background:linear-gradient(90deg,var(--gold),#f3d28d)}.dish-content{padding:20px;display:flex;flex-direction:column;flex:1}.dish-country{font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#9a6a18}.dish h3{margin:8px 0;font-size:1.15rem;color:var(--green)}.dish p{margin:0;color:var(--muted);line-height:1.5;font-size:.92rem;flex:1}.dish-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px}.price{font-size:1.1rem;font-weight:950;color:var(--green);white-space:nowrap}.add{border:0;border-radius:10px;background:var(--green);color:white;padding:10px 13px;font-weight:850}.add:hover{background:var(--green2)}.empty{grid-column:1/-1;text-align:center;padding:40px;color:var(--muted);background:#fff;border-radius:16px}
+.about{background:var(--cream)}.about-inner{max-width:1180px;margin:auto;padding:62px 22px;display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.about h2{font-size:2.5rem;color:var(--green);margin:8px 0}.about p{line-height:1.75;color:#5e655c}.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.feature{padding:15px;background:white;border-radius:12px;font-weight:750;color:var(--green)}.about-image{min-height:330px;border-radius:24px;background:url('https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=85') center/cover;box-shadow:var(--shadow)}
+.contact{background:var(--green);color:white}.contact-inner{max-width:1180px;margin:auto;padding:54px 22px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}.contact h2{margin:0 0 8px;font-size:2rem}.contact p{margin:0;color:#d8e4d9}
+footer{padding:22px;text-align:center;color:#7a8077;background:#fff;font-size:.88rem}
+.overlay{position:fixed;inset:0;background:#101a13a8;z-index:50;opacity:0;pointer-events:none;transition:opacity .25s}.overlay.show{opacity:1;pointer-events:auto}.cart-panel{position:fixed;right:0;top:0;height:100%;width:min(470px,100%);background:#fffdf9;z-index:51;transform:translateX(105%);transition:transform .28s;display:flex;flex-direction:column;box-shadow:-15px 0 40px #0002}.cart-panel.open{transform:translateX(0)}.cart-head{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid #eee5d8}.cart-head h2{margin:0;color:var(--green)}.close{border:0;background:#f0e9de;border-radius:10px;width:40px;height:40px;font-size:1.2rem}.cart-items{padding:14px 20px;overflow:auto;flex:1}.cart-empty{text-align:center;color:var(--muted);padding:38px 10px}.cart-item{display:grid;grid-template-columns:1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid #eee5d8}.cart-item h4{margin:0 0 5px;color:var(--green)}.cart-item small{color:var(--muted)}.item-actions{display:flex;align-items:center;gap:8px;margin-top:9px}.qty-btn{border:1px solid #ddd;background:white;border-radius:8px;width:29px;height:29px;font-weight:900}.remove{border:0;background:none;color:#b13b2c;font-size:.82rem;margin-left:4px}.cart-bottom{padding:20px;border-top:1px solid #eee5d8}.totalrow{display:flex;justify-content:space-between;font-weight:900;font-size:1.2rem;margin-bottom:15px;color:var(--green)}.cart-bottom label{display:block;font-size:.85rem;font-weight:750;margin:12px 0 6px}.cart-bottom input,.cart-bottom textarea{width:100%;border:1px solid #ddd5c8;border-radius:10px;padding:11px;background:white}.cart-bottom textarea{resize:vertical;min-height:65px}.checkout{width:100%;margin-top:14px;background:#25d366;color:#063d21;border:0;border-radius:12px;padding:14px;font-weight:950;font-size:1rem}.checkout:disabled{opacity:.45;cursor:not-allowed}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:var(--green);color:white;padding:12px 18px;border-radius:999px;z-index:80;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{display:block}.section-head p{margin-top:10px}.about-inner{grid-template-columns:1fr}.about-image{min-height:260px}.navlinks a{display:none}}
+@media(max-width:560px){.menu-grid{grid-template-columns:1fr}.hero-inner{padding-top:65px;padding-bottom:70px}.section{padding-top:48px;padding-bottom:48px}.nav{padding:11px 15px}.brand{font-size:1.15rem}.cart-open{padding:10px 13px}.dish-content{padding:17px}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#accueil"><span class="logo">🍲</span> BON GOÛT</a>
+    <div class="navlinks"><a href="#menu">Notre menu</a><a href="#histoire">Notre histoire</a><a href="#contact">Contact</a></div>
+    <button class="cart-open" onclick="openCart()">🛒 Panier <span id="cart-count">0</span></button>
+  </nav>
+</header>
+<main>
+<section class="hero" id="accueil">
+ <div class="hero-inner">
+  <div class="eyebrow">Saveurs d'Afrique · Fait avec passion</div>
+  <h1>Le goût de l'Afrique,<br>dans chaque assiette.</h1>
+  <p>Découvrez les recettes généreuses du Bénin, du Ghana, de la Côte d'Ivoire, du Cameroun, du Sénégal et du Togo. Des plats authentiques, préparés avec amour.</p>
+  <div class="hero-actions"><a class="btn btn-gold" href="#menu">Découvrir le menu</a><button class="btn btn-light" onclick="openCart()">Voir mon panier</button></div>
+ </div>
+</section>
+<section class="section" id="menu">
+ <div class="section-head"><div><div class="eyebrow">Notre carte</div><h2>Un voyage gourmand</h2></div><p>Choisissez vos spécialités préférées. Ajoutez-les au panier, ajustez les quantités puis envoyez votre commande directement sur WhatsApp.</p></div>
+ <div class="searchrow"><input id="search" type="search" placeholder="Rechercher un plat ou un pays…" aria-label="Rechercher un plat" oninput="renderMenu()"></div>
+ <div class="filters" id="filters">
+  <button class="filter active" data-country="Tous" onclick="setCountry('Tous',this)">Tout le menu</button>
+  <button class="filter" data-country="Bénin" onclick="setCountry('Bénin',this)">🇧🇯 Bénin</button>
+  <button class="filter" data-country="Ghana" onclick="setCountry('Ghana',this)">🇬🇭 Ghana</button>
+  <button class="filter" data-country="Côte d’Ivoire" onclick="setCountry('Côte d’Ivoire',this)">🇨🇮 Côte d’Ivoire</button>
+  <button class="filter" data-country="Cameroun" onclick="setCountry('Cameroun',this)">🇨🇲 Cameroun</button>
+  <button class="filter" data-country="Sénégal" onclick="setCountry('Sénégal',this)">🇸🇳 Sénégal</button>
+  <button class="filter" data-country="Togo" onclick="setCountry('Togo',this)">🇹🇬 Togo</button>
+ </div>
+ <div class="menu-grid" id="menu-grid"></div>
+</section>
+<section class="about" id="histoire"><div class="about-inner">
+ <div><div class="eyebrow">Bienvenue chez Bon Goût</div><h2>Une cuisine qui rassemble.</h2><p>Bon Goût célèbre la richesse culinaire africaine. Notre carte met à l’honneur les recettes traditionnelles et les saveurs emblématiques de six pays, avec des ingrédients soigneusement choisis et une préparation généreuse.</p><p>Que vous soyez amateur de sauces relevées, de grillades ou de plats mijotés, trouvez votre bonheur et partagez un moment convivial.</p><div class="features"><div class="feature">🌍 6 cuisines africaines</div><div class="feature">🥘 Recettes authentiques</div><div class="feature">🛵 Commande WhatsApp</div><div class="feature">❤️ Préparé avec passion</div></div></div>
+ <div class="about-image" role="img" aria-label="Cuisine africaine généreuse"></div>
+</div></section>
+<section class="contact" id="contact"><div class="contact-inner"><div><h2>Une envie de Bon Goût ?</h2><p>Composez votre panier et envoyez-nous votre commande sur WhatsApp.</p></div><button class="btn btn-gold" onclick="openCart()">🛒 Commander maintenant</button></div></section>
+</main>
+<footer>© <span id="year"></span> Bon Goût Restaurant · Cuisine africaine avec passion</footer>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="cart-panel" id="cart-panel" aria-label="Votre panier" aria-hidden="true">
+ <div class="cart-head"><h2>🛒 Votre panier</h2><button class="close" onclick="closeCart()" aria-label="Fermer le panier">×</button></div>
+ <div class="cart-items" id="cart-items"></div>
+ <div class="cart-bottom">
+  <div class="totalrow"><span>Total</span><span id="cart-total">0 FCFA</span></div>
+  <label for="customer-name">Votre nom (facultatif)</label><input id="customer-name" placeholder="Nom et prénom">
+  <label for="customer-address">Adresse / lieu de livraison</label><input id="customer-address" placeholder="Quartier, repère…" >
+  <label for="customer-note">Instructions (facultatif)</label><textarea id="customer-note" placeholder="Niveau de piment, heure souhaitée…"></textarea>
+  <button class="checkout" id="checkout" onclick="checkout()" disabled>Commander sur WhatsApp ↗</button>
+ </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const dishes = [
+ {id:1,country:"Bénin",name:"Atassi (riz au gras)",desc:"Riz parfumé accompagné de haricots et d'une sauce tomate savoureuse.",price:3500},
+ {id:2,country:"Bénin",name:"Amiwo & poulet",desc:"Pâte rouge de maïs servie avec poulet et sauce pimentée.",price:5000},
+ {id:3,country:"Bénin",name:"Wagasi grillé",desc:"Fromage peulh doré, accompagné d'une sauce arachide.",price:4000},
+ {id:4,country:"Bénin",name:"Pâte noire & sauce crin-crin",desc:"Pâte traditionnelle avec sauce feuilles et poisson fumé.",price:4500},
+ {id:5,country:"Bénin",name:"Couscous de maïs & sauce gombo",desc:"Couscous local servi avec une sauce gombo généreuse.",price:4000},
+ {id:6,country:"Ghana",name:"Jollof rice au poulet",desc:"Riz épicé à la tomate, servi avec poulet grillé.",price:6000},
+ {id:7,country:"Ghana",name:"Waakye",desc:"Riz et haricots, gari, spaghetti et sauce shito.",price:4500},
+ {id:8,country:"Ghana",name:"Banku & tilapia",desc:"Banku traditionnel avec tilapia grillé et piment frais.",price:8500},
+ {id:9,country:"Ghana",name:"Fufu & light soup",desc:"Fufu accompagné d'une soupe légère au poulet ou au bœuf.",price:7000},
+ {id:10,country:"Côte d’Ivoire",name:"Attiéké poisson braisé",desc:"Attiéké frais, poisson braisé et oignons marinés.",price:6500},
+ {id:11,country:"Côte d’Ivoire",name:"Alloco & poulet",desc:"Plantain mûr frit, poulet croustillant et piment.",price:5500},
+ {id:12,country:"Côte d’Ivoire",name:"Kedjenou de poulet",desc:"Poulet mijoté à l'étouffée avec tomates et aromates.",price:7500},
+ {id:13,country:"Côte d’Ivoire",name:"Garba",desc:"Attiéké, thon, tomate, oignon et piment.",price:3500},
+ {id:14,country:"Cameroun",name:"Poulet DG",desc:"Poulet sauté, plantain mûr et légumes colorés.",price:8000},
+ {id:15,country:"Cameroun",name:"Ndolé & plantain",desc:"Feuilles de ndolé, arachides, viande ou poisson et plantain.",price:7500},
+ {id:16,country:"Cameroun",name:"Eru & water fufu",desc:"Eru traditionnel, water fufu et viande/poisson.",price:9000},
+ {id:17,country:"Cameroun",name:"Poisson braisé façon camerounaise",desc:"Poisson mariné aux épices, servi avec accompagnement.",price:10000},
+ {id:18,country:"Sénégal",name:"Thiéboudienne",desc:"Riz au poisson, légumes et sauce tomate sénégalaise.",price:7500},
+ {id:19,country:"Sénégal",name:"Yassa poulet",desc:"Poulet mariné au citron et aux oignons, riz parfumé.",price:6500},
+ {id:20,country:"Sénégal",name:"Mafé de bœuf",desc:"Bœuf mijoté dans une sauce arachide onctueuse.",price:7000},
+ {id:21,country:"Sénégal",name:"Pastels au thon (portion)",desc:"Beignets croustillants au thon, servis avec sauce.",price:2500},
+ {id:22,country:"Togo",name:"Fufu & sauce arachide",desc:"Fufu de manioc accompagné d'une sauce arachide maison.",price:5000},
+ {id:23,country:"Togo",name:"Akoumé & sauce gombo",desc:"Pâte de maïs fermentée et sauce gombo au poisson.",price:4500},
+ {id:24,country:"Togo",name:"Ayimolou",desc:"Riz et haricots, accompagnés de sauce et piment.",price:3500},
+ {id:25,country:"Togo",name:"Poisson braisé & gari",desc:"Poisson grillé, gari, légumes et piment.",price:7000},
+ {id:26,country:"Tous",name:"Assiette de grillades mixte",desc:"Poulet, bœuf et poisson avec frites/alloco et salade.",price:15000},
+ {id:27,country:"Tous",name:"Plateau familial africain",desc:"Grande sélection de spécialités à partager (4 personnes).",price:20000},
+ {id:28,country:"Tous",name:"Bissap ou jus de gingembre",desc:"Boisson maison fraîche, au choix.",price:1500}
+];
+let activeCountry="Tous";
+let cart={};
+const money=n=>new Intl.NumberFormat("fr-FR").format(n)+" FCFA";
+function setCountry(country,btn){activeCountry=country;document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===btn));renderMenu()}
+function renderMenu(){
+ const q=document.getElementById("search").value.trim().toLocaleLowerCase("fr");
+ const list=dishes.filter(d=>(activeCountry==="Tous"||d.country===activeCountry||d.country==="Tous")&&(d.name+" "+d.desc+" "+d.country).toLocaleLowerCase("fr").includes(q));
+ const grid=document.getElementById("menu-grid");
+ if(!list.length){grid.innerHTML='<div class="empty">Aucun plat trouvé. Essayez un autre terme.</div>';return}
+ grid.innerHTML=list.map(d=>`<article class="dish"><div class="dish-top"></div><div class="dish-content"><div class="dish-country">${flag(d.country)} ${d.country==="Tous"?"Bon Goût":d.country}</div><h3>${escapeHTML(d.name)}</h3><p>${escapeHTML(d.desc)}</p><div class="dish-bottom"><span class="price">${money(d.price)}</span><button class="add" onclick="addToCart(${d.id})">＋ Ajouter</button></div></div></article>`).join("");
+}
+function flag(c){return({"Bénin":"🇧🇯","Ghana":"🇬🇭","Côte d’Ivoire":"🇨🇮","Cameroun":"🇨🇲","Sénégal":"🇸🇳","Togo":"🇹🇬","Tous":"🌍"})[c]||"🌍"}
+function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function addToCart(id){cart[id]=(cart[id]||0)+1;updateCart();toast("Plat ajouté au panier");}
+function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];updateCart()}
+function removeItem(id){delete cart[id];updateCart()}
+function cartEntries(){return Object.entries(cart).map(([id,qty])=>({dish:dishes.find(d=>d.id===Number(id)),qty})).filter(x=>x.dish)}
+function total(){return cartEntries().reduce((sum,x)=>sum+x.dish.price*x.qty,0)}
+function updateCart(){
+ const entries=cartEntries(),count=entries.reduce((s,x)=>s+x.qty,0);
+ document.getElementById("cart-count").textContent=count;
+ document.getElementById("cart-total").textContent=money(total());
+ document.getElementById("checkout").disabled=!entries.length;
+ const box=document.getElementById("cart-items");
+ if(!entries.length){box.innerHTML='<div class="cart-empty">Votre panier est vide.<br><br>Ajoutez vos plats préférés depuis le menu 🍲</div>';return}
+ box.innerHTML=entries.map(({dish,qty})=>`<div class="cart-item"><div><h4>${escapeHTML(dish.name)}</h4><small>${money(dish.price)} / unité</small><div class="item-actions"><button class="qty-btn" onclick="changeQty(${dish.id},-1)" aria-label="Diminuer">−</button><strong>${qty}</strong><button class="qty-btn" onclick="changeQty(${dish.id},1)" aria-label="Augmenter">＋</button><button class="remove" onclick="removeItem(${dish.id})">Retirer</button></div></div><strong>${money(dish.price*qty)}</strong></div>`).join("");
+}
+function openCart(){document.getElementById("overlay").classList.add("show");document.getElementById("cart-panel").classList.add("open");document.getElementById("cart-panel").setAttribute("aria-hidden","false");document.body.style.overflow="hidden"}
+function closeCart(){document.getElementById("overlay").classList.remove("show");document.getElementById("cart-panel").classList.remove("open");document.getElementById("cart-panel").setAttribute("aria-hidden","true");document.body.style.overflow=""}
+function checkout(){
+ const entries=cartEntries();if(!entries.length)return;
+ const name=document.getElementById("customer-name").value.trim();
+ const address=document.getElementById("customer-address").value.trim();
+ const note=document.getElementById("customer-note").value.trim();
+ let msg="🍲 *COMMANDE — BON GOÛT RESTAURANT*%0A";
+ msg+="━━━━━━━━━━━━━━━━━━%0A";
+ if(name)msg+="👤 Client : "+encodeURIComponent(name)+"%0A";
+ if(address)msg+="📍 Livraison : "+encodeURIComponent(address)+"%0A";
+ msg+="%0A*DÉTAIL DE LA COMMANDE*%0A";
+ entries.forEach(({dish,qty})=>{msg+="• "+encodeURIComponent(dish.name)+" × "+qty+" = "+encodeURIComponent(money(dish.price*qty))+"%0A"});
+ msg+="%0A━━━━━━━━━━━━━━━━━━%0A*TOTAL : "+encodeURIComponent(money(total()))+"*%0A";
+ if(note)msg+="%0A📝 Instructions : "+encodeURIComponent(note)+"%0A";
+ msg+="%0AMerci !";
+ const url="https://wa.me/22953023080?text="+msg;
+ window.open(url,"_blank","noopener");
+}
+let toastTimer;function toast(msg){const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),1900)}
+document.getElementById("year").textContent=new Date().getFullYear();
+renderMenu();updateCart();
+</script>
+</body>
+</html>
