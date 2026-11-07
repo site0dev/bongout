@@ -125,13 +125,19 @@ function renderMenu(){
  const list=dishes.filter(d=>(activeCountry==="Tous"||d.country===activeCountry||d.country==="Tous")&&(d.name+" "+d.desc+" "+d.country).toLocaleLowerCase("fr").includes(q));
  const grid=document.getElementById("menu-grid");
  if(!list.length){grid.innerHTML='<div class="empty">Aucun plat trouvé. Essayez un autre terme.</div>';return}
- grid.innerHTML=list.map(d=>`<article class="dish"><div class="dish-top ${d.image?"has-photo":"no-photo"}" ${d.image?`style="background-image:url('${d.image}')" role="button" tabindex="0" onclick="openPhoto(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPhoto(this)}"`:"role="img""} aria-label="${d.image?`Agrandir la photo de ${escapeHTML(d.name)}`:`Photo à venir pour ${escapeHTML(d.name)}`} "></div><div class="dish-content"><div class="dish-country">${flag(d.country)} ${d.country==="Tous"?"Bon Goût":d.country}</div><h3>${escapeHTML(d.name)}</h3><p>${escapeHTML(d.desc)}</p><div class="dish-bottom"><span class="price">${money(d.price)}</span><button class="add" onclick="addToCart(${d.id})">＋ Ajouter</button></div></div></article>`).join("");
+ grid.innerHTML=list.map(d=>{
+  const photoClass=d.image?"has-photo":"no-photo";
+  const photoStyle=d.image?`style="background-image:url('${d.image}')"`:"";
+  const photoAttrs=d.image?`role="button" tabindex="0" onclick="openPhoto(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPhoto(this)}"`:`role="img"`;
+  const photoLabel=d.image?`Agrandir la photo de ${escapeHTML(d.name)}`:`Photo à venir pour ${escapeHTML(d.name)}`;
+  return `<article class="dish"><div class="dish-top ${photoClass}" ${photoStyle} ${photoAttrs} aria-label="${photoLabel}"></div><div class="dish-content"><div class="dish-country">${flag(d.country)} ${d.country==="Tous"?"Bon Goût":d.country}</div><h3>${escapeHTML(d.name)}</h3><p>${escapeHTML(d.desc)}</p><div class="dish-bottom"><span class="price">${money(d.price)}</span><button class="add" onclick="addToCart(${d.id})">＋ Ajouter</button></div></div></article>`;
+ }).join("");
 }
 function flag(c){return({"Bénin":"🇧🇯","Ghana":"🇬🇭","Côte d’Ivoire":"🇨🇮","Cameroun":"🇨🇲","Sénégal":"🇸🇳","Togo":"🇹🇬","Tous":"🌍"})[c]||"🌍"}
 function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function openPhoto(el){
  const bg=getComputedStyle(el).backgroundImage;
- const match=bg.match(/^url\(["']?(.*?)["']?\)$/);
+ const match=bg.match(/^url\(["\']?(.*?)["\']?\)$/);
  if(!match||!match[1])return;
  const box=document.getElementById("photo-lightbox");
  const img=document.getElementById("lightbox-image");
