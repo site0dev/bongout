@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#143b2a">
-<meta name="description" content="Bon Goût — restaurant de cuisine africaine : spécialités béninoises, ghanéennes, ivoiriennes, camerounaises, sénégalaises et togolaises.">
+<meta name="description" content="Bon Goût — restaurant de cuisine africaine : spécialités du Bénin, du Togo et de la Côte d’Ivoire.">
 <title>Bon Goût | Restaurant africain</title>
 <style>
 :root{--green:#143b2a;--green2:#24563d;--gold:#e5a83b;--cream:#fff8ec;--ink:#22251f;--muted:#6c716a;--white:#fff;--shadow:0 12px 35px #143b2a18}
@@ -43,7 +43,7 @@ footer{padding:22px;text-align:center;color:#7a8077;background:#fff;font-size:.8
  <div class="hero-inner">
   <div class="eyebrow">Saveurs d'Afrique · Fait avec passion</div>
   <h1>Le goût de l'Afrique,<br>dans chaque assiette.</h1>
-  <p>Découvrez les recettes généreuses du Bénin, du Ghana, de la Côte d'Ivoire, du Cameroun, du Sénégal et du Togo. Des plats authentiques, préparés avec amour.</p>
+  <p>Découvrez les recettes généreuses du Bénin, du Togo et de la Côte d'Ivoire. Des plats authentiques, préparés avec amour.</p>
   <div class="hero-actions"><a class="btn btn-gold" href="#menu">Découvrir le menu</a><button class="btn btn-light" onclick="openCart()">Voir mon panier</button></div>
  </div>
 </section>
@@ -53,16 +53,13 @@ footer{padding:22px;text-align:center;color:#7a8077;background:#fff;font-size:.8
  <div class="filters" id="filters">
   <button class="filter active" data-country="Tous" onclick="setCountry('Tous',this)">Tout le menu</button>
   <button class="filter" data-country="Bénin" onclick="setCountry('Bénin',this)">🇧🇯 Bénin</button>
-  <button class="filter" data-country="Ghana" onclick="setCountry('Ghana',this)">🇬🇭 Ghana</button>
-  <button class="filter" data-country="Côte d’Ivoire" onclick="setCountry('Côte d’Ivoire',this)">🇨🇮 Côte d’Ivoire</button>
-  <button class="filter" data-country="Cameroun" onclick="setCountry('Cameroun',this)">🇨🇲 Cameroun</button>
-  <button class="filter" data-country="Sénégal" onclick="setCountry('Sénégal',this)">🇸🇳 Sénégal</button>
   <button class="filter" data-country="Togo" onclick="setCountry('Togo',this)">🇹🇬 Togo</button>
+  <button class="filter" data-country="Côte d’Ivoire" onclick="setCountry('Côte d’Ivoire',this)">🇨🇮 Côte d’Ivoire</button>
  </div>
  <div class="menu-grid" id="menu-grid"></div>
 </section>
 <section class="about" id="histoire"><div class="about-inner">
- <div><div class="eyebrow">Bienvenue chez Bon Goût</div><h2>Une cuisine qui rassemble.</h2><p>Bon Goût célèbre la richesse culinaire africaine. Notre carte met à l’honneur les recettes traditionnelles et les saveurs emblématiques de six pays, avec des ingrédients soigneusement choisis et une préparation généreuse.</p><p>Que vous soyez amateur de sauces relevées, de grillades ou de plats mijotés, trouvez votre bonheur et partagez un moment convivial.</p><div class="features"><div class="feature">🌍 6 cuisines africaines</div><div class="feature">🥘 Recettes authentiques</div><div class="feature">🛵 Commande WhatsApp</div><div class="feature">❤️ Préparé avec passion</div></div></div>
+ <div><div class="eyebrow">Bienvenue chez Bon Goût</div><h2>Une cuisine qui rassemble.</h2><p>Bon Goût célèbre la richesse culinaire africaine. Notre carte met à l’honneur les recettes traditionnelles et les saveurs emblématiques du Bénin, du Togo et de la Côte d’Ivoire, avec des ingrédients soigneusement choisis et une préparation généreuse.</p><p>Que vous soyez amateur de sauces relevées, de grillades ou de plats mijotés, trouvez votre bonheur et partagez un moment convivial.</p><div class="features"><div class="feature">🌍 6 cuisines africaines</div><div class="feature">🥘 Recettes authentiques</div><div class="feature">🛵 Commande WhatsApp</div><div class="feature">❤️ Préparé avec passion</div></div></div>
  <div class="about-image" role="img" aria-label="Cuisine africaine généreuse"></div>
 </div></section>
 <section class="contact" id="contact"><div class="contact-inner"><div><h2>Une envie de Bon Goût ?</h2><p>Composez votre panier et envoyez-nous votre commande sur WhatsApp.</p></div><button class="btn btn-gold" onclick="openCart()">🛒 Commander maintenant</button></div></section>
@@ -91,30 +88,14 @@ const dishes = [
  {id:2,country:"Bénin",name:"Amiwo & poulet",desc:"Pâte rouge de maïs servie avec poulet et sauce pimentée.",image:"./amiwo.jpg",price:5000},
  {id:3,country:"Bénin",name:"Wagasi grillé",desc:"Fromage peulh doré, accompagné d'une sauce arachide.",image:"./wagasi.jpg",price:4000},
  {id:4,country:"Bénin",name:"Pâte noire & sauce crin-crin",desc:"Pâte traditionnelle avec sauce feuilles et poisson fumé.",image:"./patenoir.jpg",price:4500},
- {id:5,country:"Bénin",name:"Couscous de maïs & sauce gombo",desc:"Couscous local servi avec une sauce gombo généreuse.",image:"./couscousdemais.jpg",price:4000},
- {id:6,country:"Ghana",name:"Jollof rice au poulet",desc:"Riz épicé à la tomate, servi avec poulet grillé.",image:"./jollofriceaupoulet.jpg",price:6000},
- {id:7,country:"Ghana",name:"Waakye",desc:"Riz et haricots, gari, spaghetti et sauce shito.",image:"./waakey.jpg",price:4500},
- {id:8,country:"Ghana",name:"Banku & tilapia",desc:"Banku traditionnel avec tilapia grillé et piment frais.",image:"./banku.jpg",price:8500},
- {id:9,country:"Ghana",name:"Fufu & light soup",desc:"Fufu accompagné d'une soupe légère au poulet ou au bœuf.",image:"./fufulight.jpg",price:7000},
- {id:10,country:"Côte d’Ivoire",name:"Attiéké poisson braisé",desc:"Attiéké frais, poisson braisé et oignons marinés.",image:"./attieke.jpg",price:6500},
- {id:11,country:"Côte d’Ivoire",name:"Alloco & poulet",desc:"Plantain mûr frit, poulet croustillant et piment.",image:null,price:5500},
- {id:12,country:"Côte d’Ivoire",name:"Kedjenou de poulet",desc:"Poulet mijoté à l'étouffée avec tomates et aromates.",image:null,price:7500},
- {id:13,country:"Côte d’Ivoire",name:"Garba",desc:"Attiéké, thon, tomate, oignon et piment.",image:null,price:3500},
- {id:14,country:"Cameroun",name:"Poulet DG",desc:"Poulet sauté, plantain mûr et légumes colorés.",image:null,price:8000},
- {id:15,country:"Cameroun",name:"Ndolé & plantain",desc:"Feuilles de ndolé, arachides, viande ou poisson et plantain.",image:null,price:7500},
- {id:16,country:"Cameroun",name:"Eru & water fufu",desc:"Eru traditionnel, water fufu et viande/poisson.",image:null,price:9000},
- {id:17,country:"Cameroun",name:"Poisson braisé façon camerounaise",desc:"Poisson mariné aux épices, servi avec accompagnement.",image:null,price:10000},
- {id:18,country:"Sénégal",name:"Thiéboudienne",desc:"Riz au poisson, légumes et sauce tomate sénégalaise.",image:null,price:7500},
- {id:19,country:"Sénégal",name:"Yassa poulet",desc:"Poulet mariné au citron et aux oignons, riz parfumé.",image:null,price:6500},
- {id:20,country:"Sénégal",name:"Mafé de bœuf",desc:"Bœuf mijoté dans une sauce arachide onctueuse.",image:null,price:7000},
- {id:21,country:"Sénégal",name:"Pastels au thon (portion)",desc:"Beignets croustillants au thon, servis avec sauce.",image:null,price:2500},
- {id:22,country:"Togo",name:"Fufu & sauce arachide",desc:"Fufu de manioc accompagné d'une sauce arachide maison.",image:null,price:5000},
- {id:23,country:"Togo",name:"Akoumé & sauce gombo",desc:"Pâte de maïs fermentée et sauce gombo au poisson.",image:null,price:4500},
- {id:24,country:"Togo",name:"Ayimolou",desc:"Riz et haricots, accompagnés de sauce et piment.",image:null,price:3500},
- {id:25,country:"Togo",name:"Poisson braisé & gari",desc:"Poisson grillé, gari, légumes et piment.",image:null,price:7000},
- {id:26,country:"Tous",name:"Assiette de grillades mixte",desc:"Poulet, bœuf et poisson avec frites/alloco et salade.",image:null,price:15000},
- {id:27,country:"Tous",name:"Plateau familial africain",desc:"Grande sélection de spécialités à partager (4 personnes).",image:null,price:20000},
- {id:28,country:"Tous",name:"Bissap ou jus de gingembre",desc:"Boisson maison fraîche, au choix.",image:null,price:1500}
+ {id:5,country:"Togo",name:"Fufu & sauce arachide",desc:"Fufu de manioc accompagné d'une sauce arachide maison.",image:"./fufulight.jpg",price:5000},
+ {id:6,country:"Togo",name:"Akoumé & sauce gombo",desc:"Pâte de maïs fermentée et sauce gombo au poisson.",image:"./couscousdemais.jpg",price:4500},
+ {id:7,country:"Togo",name:"Ayimolou",desc:"Riz et haricots, accompagnés de sauce et piment.",image:"./waakey.jpg",price:3500},
+ {id:8,country:"Togo",name:"Poisson braisé & gari",desc:"Poisson grillé, gari, légumes et piment.",image:"./banku.jpg",price:7000},
+ {id:9,country:"Côte d’Ivoire",name:"Attiéké poisson braisé",desc:"Attiéké frais, poisson braisé et oignons marinés.",image:"./attieke.jpg",price:6500},
+ {id:10,country:"Côte d’Ivoire",name:"Alloco & poulet",desc:"Plantain mûr frit, poulet croustillant et piment.",image:null,price:5500},
+ {id:11,country:"Côte d’Ivoire",name:"Kedjenou de poulet",desc:"Poulet mijoté à l'étouffée avec tomates et aromates.",image:null,price:7500},
+ {id:12,country:"Côte d’Ivoire",name:"Garba",desc:"Attiéké, thon, tomate, oignon et piment.",image:null,price:3500}
 ];
 let activeCountry="Tous";
 let cart={};
@@ -133,7 +114,7 @@ function renderMenu(){
   return `<article class="dish"><div class="dish-top ${photoClass}" ${photoStyle} ${photoAttrs} aria-label="${photoLabel}"></div><div class="dish-content"><div class="dish-country">${flag(d.country)} ${d.country==="Tous"?"Bon Goût":d.country}</div><h3>${escapeHTML(d.name)}</h3><p>${escapeHTML(d.desc)}</p><div class="dish-bottom"><span class="price">${money(d.price)}</span><button class="add" onclick="addToCart(${d.id})">＋ Ajouter</button></div></div></article>`;
  }).join("");
 }
-function flag(c){return({"Bénin":"🇧🇯","Ghana":"🇬🇭","Côte d’Ivoire":"🇨🇮","Cameroun":"🇨🇲","Sénégal":"🇸🇳","Togo":"🇹🇬","Tous":"🌍"})[c]||"🌍"}
+function flag(c){return({"Bénin":"🇧🇯","Côte d’Ivoire":"🇨🇮","Togo":"🇹🇬","Tous":"🌍"})[c]||"🌍"}
 function escapeHTML(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function openPhoto(el){
  const bg=getComputedStyle(el).backgroundImage;
